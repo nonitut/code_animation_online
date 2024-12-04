@@ -1,0 +1,121 @@
+*{ box-sizing: border-box;}
+body{
+    width: 100%;
+    height: 200vw;
+    background: rgb(249, 247, 247);
+    cursor: url("../img/icons8-зеркальный-шар-эмодзи-48.png") , auto;
+}
+
+@font-face {
+font-family: "CarlaSansLight";
+src: url("../fonts/CarlaSansLight.ttf") format("truetype");
+font-style: Light;
+font-weight: Light;
+}
+
+p{ font-family: 'CarlaSansLight'; }
+
+
+.flex_colomn{
+    display: flex;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.firstbox{
+    height: 20vw;
+    width: 35%;
+    background: lightsteelblue;
+    position: relative;
+    overflow-x: hidden;
+    cursor: url("../img/icons8-искры-48.png") , auto;
+}
+
+.circle{
+    height: 6vw;
+    width: 6vw;
+    background: blue;
+    color: aliceblue;
+    font-size: 5vw;
+    border-radius: 50%;
+    position: absolute;
+    animation: ball 5s linear infinite;
+}
+
+.circle:hover{ 
+    scale: 3;
+    transition: all 0.5s ;
+}
+
+@keyframes ball{
+    0%{ top: 0%; left: 10%;}
+    10%{ top: 70%; left: 20%; text-align: center;}
+    40%{ top: 0%; left: 50%; transform: rotate(45deg); scale: 0.5;}
+    80%{ top: 70%; left: 70%; text-align: end;}
+    100%{ top: 0%; left: 110%;}
+}
+
+.secondbox{
+    height: 20vw;
+    width: 35%;
+    background: lightblue;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.rotate{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: 1px solid lightcoral;
+    position: absolute;
+    margin-left: 30% ;
+    margin-top: 8%;
+    transform-origin: left center;
+    animation: spin 5s linear infinite ;
+    transform-style: preserve-3d;
+}
+.del05{ animation-delay: 0.5s; }
+.del1{ animation-delay: 1s;}
+
+@keyframes spin {
+    0%{ transform: rotateX(0deg);}
+    100%{ transform: rotateX(360deg);}
+}
+
+
+.thirdbox{
+    width: 30%;
+    height: 20vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: lightcoral;
+    position: relative;
+    display: flex;
+    padding: 0.5%;
+    scrollbar-color:  blue white;
+}
+
+.cursor{
+    border: 1px dashed lightblue;
+    transition: all 0.5s ;
+    width: 12vw;
+    height: 25vw;
+    margin: 0.5%;
+    background: lavenderblush;
+}
+
+.cursor:hover{
+    background: lavender;
+    transition: all 0.5s ;
+}
+
+.default{ cursor: default;}
+.move { cursor: move;}
+.help { cursor: help;}
+.pointer { cursor: pointer;}
+.grab { cursor: grab;}
+.wait{ cursor: wait; }
+.textcursor { cursor: text;}
+.nonecursor { cursor: none;}
